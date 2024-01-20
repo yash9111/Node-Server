@@ -14,7 +14,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// MongoDB Connection
+// MongoDB Connection 
 mongoose.connect(config.databaseURL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 // Routes

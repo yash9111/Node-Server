@@ -76,7 +76,23 @@ authRouter.post('/login', async (req, res) => {
     // Generate a JWT token for authentication
     const token = jwt.sign({ username: user.username }, config.secretKey, { expiresIn: '1h' });
 
-    res.json({ token });
+    // Return user details along with the token
+    res.json({
+      token,
+      user: {
+        username: user.username,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        gender:user.gender,
+        age:user.age,
+        weight:user.weight,
+        height:user.height,
+        disease:user.disease,
+        profession:user.profession,
+        goal:user.goal
+        // Add other user details as needed
+      },
+    });
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error' });
