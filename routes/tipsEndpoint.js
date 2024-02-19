@@ -13,11 +13,8 @@ const tips = [
     "Take short breaks throughout the day to stretch and move around, especially if you sit for long periods.",
     "Practice good posture to prevent back and neck pain.",
     "Spend time outdoors in nature to boost your mood and get some fresh air.",
-    "Surround yourself with positive influences and supportive relationships for better mental and emotional well-being."
-];
-
-tips += [
-    "Set aside time for hobbies and activities you enjoy to relax and unwind.",
+    "Surround yourself with positive influences and supportive relationships for better mental and emotional well-being.",
+  "Set aside time for hobbies and activities you enjoy to relax and unwind.",
     "Make time for regular exercise to keep your body strong and healthy.",
     "Practice deep breathing exercises to reduce stress and promote relaxation.",
     "Keep a gratitude journal to focus on the positive aspects of your life.",
@@ -27,7 +24,9 @@ tips += [
     "Limit screen time before bedtime to improve sleep quality and reduce eye strain.",
     "Find ways to give back to your community through volunteering or acts of kindness.",
     "Listen to your body and prioritize self-care to maintain physical and emotional well-being."
-]
+];
+
+
 
 
 // Endpoint to get a random tip
