@@ -2,13 +2,16 @@ const express = require('express');
 const router = express.Router();
 const tf = require('@tensorflow/tfjs-node');
 
+
+const modelPath = "model.json";
+
 // Load the TensorFlow.js model
 async function loadModel() {
     try {
-        const model = await tf.loadLayersModel('model.json');
+        const model = await tf.loadLayersModel('file://' + modelPath);
         return model;
     } catch (error) {
-        console.error('Error loading TensorFlow.js model:', error);
+        console.error('Error loading TensorFlow.js model:', error.message);
         throw error;
     }
 }

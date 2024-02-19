@@ -9,6 +9,8 @@ const User = require('./models/User');
 const yogaRoutes = require('./routes/yoga');
 const authRoutes = require('./routes/auth');
 const mlRoutes = require('./routes/ml'); // Import ml routes
+const tipsEndpoint = require('./routes/tipsEndpoint');
+
 
 const app = express();
 
@@ -22,6 +24,8 @@ mongoose.connect(config.databaseURL, { useNewUrlParser: true, useUnifiedTopology
 app.use('/yoga', yogaRoutes);
 app.use('/auth', authRoutes);  // Use authRoutes for /auth endpoints
 app.use('/ml', mlRoutes); // Use mlRoutes for /ml endpoints
+app.use('/tips', tipsEndpoint);
+
 
 const PORT = process.env.PORT || 3000;
 
